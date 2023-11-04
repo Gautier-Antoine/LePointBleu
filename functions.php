@@ -2,11 +2,11 @@
 
  /**   Test Compteur mot excerpt   **/
  function size_excerpt_length($length) {
-      return 20;
+	return 20;
  }
  add_filter('excerpt_length', 'size_excerpt_length');
  function size_more( $more ) {
-            return '...';
+	return '...';
  }
  add_filter('excerpt_more', 'size_more');
 
@@ -38,13 +38,13 @@ OTHER FUNCTIONS
 
 
 add_action( 'init', 'custom_remove_footer_credit', 10 );
-
 function custom_remove_footer_credit () {
     remove_action( 'storefront_footer', 'storefront_credit', 20 );
     add_action( 'storefront_footer', 'custom_storefront_credit', 20 );
 }
 
 function custom_storefront_credit() {
+	// TODO Add in another file
 	?>
   <div class="icons">
   	<a href="mailto:contact@lepointbleu.net" target="_blank" class="email" title="Envoyez un mail"></a>
@@ -90,23 +90,26 @@ function shortened_title() {
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-if ( ! isset( $content_width ) )
+if (!isset( $content_width )) {
 	$content_width = 810;
+}
 
 
 
 /**   Google Map   **/
 
 function rockable_googlemap($atts, $content = null) {
-  extract(shortcode_atts(array(
-     "width" => '940',
-     "height" => '300',
-     "src" => ''
-  ), $atts));
-  return '
-    <div>
-      <iframe src="'.$src.'&output=embed" width="'.$width.'" height="'.$height.'"  frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-    </div>
+	extract(
+		shortcode_atts(array(
+			"width" => '940',
+			"height" => '300',
+			"src" => ''
+		), $atts)
+	);
+	return '
+		<div>
+			<iframe src="'.$src.'&output=embed" width="'.$width.'" height="'.$height.'"  frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+		</div>
    ';
 }
 add_shortcode("googlemap", "rockable_googlemap");
