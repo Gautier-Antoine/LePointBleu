@@ -1,0 +1,62 @@
+/* CARD */
+.row {
+	/*! display: flex; */
+	/*! flex-wrap: wrap; */
+	margin-top: 10px;
+	display: grid;
+	grid-gap: 15px 30px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* PARTS/CARD */
+.card {
+	/* width:calc(100% / 3 - 40px); */
+	/* margin: 5px 20px; */
+	border-radius: 5px;
+	height: max-content;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+	background-color: rgba(255, 255, 255, 0.6);
+
+	&:hover {
+		/*  background-color: rgba(0,0,0,.6) */
+	}
+	img {
+		width: 100%;
+		object-fit: cover;
+		height: 45%;
+		margin-bottom: 0px !important;
+
+		border-radius: 5px 5px 0px 0px;
+		border-bottom: 2px solid white;
+	}
+
+	.card-body {
+		padding: 10px;
+
+		.card-subtitle {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		.card-title {
+			margin: 0;
+			text-align: center;
+		}
+		.card-btn {
+			text-align: center;
+			width: 50%;
+			display: block;
+			margin: 10px calc(25% - 10px);
+			border-radius: 5px;
+			background-color: rgba(255, 255, 255, 0.9);
+			padding: 5px 10px;
+			box-shadow: 2px 2px 5px rgba(var(--main-color-dark), 0.3);
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.6);
+				color: white;
+			}
+		}
+	}
+}

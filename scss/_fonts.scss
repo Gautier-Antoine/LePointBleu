@@ -1,0 +1,58 @@
+/* ICONS
+@import url('http://localhost/wordpress/wp-includes/css/dashicons.min.css');
+@import url('http://localhost/wordpress/wp-content/themes/storefront-lepointbleu/fontawesome-free-5.12.0-web/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Questrial|Overlock|Kalam|Monserrat:100,200,300,400,500,600,700,800,900');
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+@import url('https://lepointbleu.net/wp-includes/css/dashicons.min.css');
+@import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+
+
+/* TEXT */
+* {
+	font-family: 'Questrial', sans-serif !important;
+	/*	font-family: 'Overlock', cursive; */
+	/* font-family: 'Montserrat', sans-serif; */
+	font-weight: 100 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/*  font-family: 'Kalam', cursive; */
+	margin: 0;
+	color: rgba(0, 0, 0, 0.5) !important;
+}
+
+h1 {
+	font-weight: 900;
+}
+
+body article .entry-header h1 {
+	font-style: italic;
+}
+
+.title-art h4 {
+	font-size: 1em;
+}
+
+.delta,
+h4 {
+	font-size: 1.2em;
+}
+
+a {
+	color: #156fb9;
+}
+
+h1.page-title {
+	display: none;
+}
+
+p {
+	margin: 0 0 0.2em;
+}

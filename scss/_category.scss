@@ -1,0 +1,206 @@
+header.site-header,
+footer {
+	background-color: rgba(0, 0, 0, 0) !important;
+}
+body {
+    &.category {
+        .share,
+        .posted-on {
+            display: none !important;
+        }
+        article {
+            /*! border-bottom: grey solid 2px; */
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            margin: 10px 0px 10px 0px;
+            float: left;
+            background-color: rgba(255, 255, 255, 0.5);
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+            .entry-header {
+                .alpha {
+                    font-size: 1.5em;
+                    font-style: italic;
+                }
+                .cat a:hover {
+                    opacity: 0.5;
+                }
+            }
+            & > .entry-header {
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.85) !important;
+                position: absolute;
+                margin-top: 15px;
+                margin-left: -0.3%;
+                padding: 5px 15px;
+                z-index: 1;
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+                a {
+                    color: rgba(0, 0, 0, 0.5);
+                    &:hover {
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+            &.category-evenements {
+                .entry-header .cat a {
+                    color: rgba(19, 171, 179, 0.6) !important;
+                }
+                a>.entry-content p {
+                    border-color: rgba(19, 179, 164, 0.6) !important;
+                }
+            }
+            &.category-conferences {
+                .entry-header .cat a {
+                    color: rgba(19, 74, 179, 0.6) !important;
+                }
+                a>.entry-content p {
+                    border-color: rgba(19, 74, 179, 0.6) !important;
+                }
+            }
+            &.category-formations {
+                .entry-header .cat a {
+                    color: rgba(24, 128, 179, 0.6) !important;
+                }
+                a>.entry-content p {
+                    border-color: rgba(24, 128, 179, 0.6) !important;
+                }
+            }
+            a {
+                .entry-content {                  
+                    /* padding: 10px;
+                    border-top: 2px solid rgba(255,255,255,1) !important; */
+                    overflow: hidden;
+                    height: 0;
+                    position: relative;
+                    // TODO CHECK IF NO IMAGE
+                    img {
+                        margin-top: 0px !important;
+                        margin-bottom: 0px !important;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center center;
+                        z-index: -1;
+                        /* filter: sepia(1) hue-rotate(200deg) saturate(0.2) contrast(1.1) blur(0.4px) !important; */
+                        filter: sepia(0) hue-rotate(0deg) saturate(0.8) contrast(1) blur(0.4px) !important;
+                        
+                    } 
+                    p {
+                
+                        border-top: 2px solid rgba(255, 255, 255, 0.4);
+                        background-color: rgba(255, 255, 255, 0.7);
+                        color: rgba(0, 0, 0, 0.5);
+                        text-shadow: 0px 0px rgba(0, 0, 0, 0);
+                    
+                        padding: 2px 10px;
+                        width: 100%;
+                        /* width: calc(((70% - 40px) / 2) - 1%); */
+                        position: absolute;
+                        margin-top: -86px;
+                        height: 86px;
+                        border-radius: 0px 0px 5px 5px;
+                    }
+                }
+            }
+            &:hover {
+                .entry-content p {
+                    border-top: 2px solid rgba(255, 255, 255, 0.8);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+                }
+            }
+            &.category {
+                padding-bottom: 15px;
+                border-bottom: grey solid 2px;
+            }
+        }
+    }
+}
+article .entry-header {
+    .cat a,
+    .posted-on,
+    .posted-on a time,
+    .tags-links a {
+        font-weight: 600 !important;
+        font-size: 1em;
+    }
+}
+
+.tags-links {
+	font-size: 1em;
+}
+
+
+body.single article.hentry .entry-content,
+body.single article.hentry .entry-header,
+body.page article.hentry .entry-content,
+body.page article.hentry .entry-header {
+	margin: 20px;
+	width: calc(100% - 40px);
+}
+
+
+@media (min-width: 1201px) {
+	body.category article a>.entry-content {
+		padding-top: 30%;
+	}
+
+	body.category article>.entry-header {
+		max-width: calc(75% - 20% + .25%);
+	}
+}
+
+@media (min-width: 921px) and (max-width: 1200px) {
+	body.category article a>.entry-content {
+		padding-top: 45%;
+	}
+
+	body.category article>.entry-header {
+		max-width: calc(70% - 10% + .25%);
+	}
+}
+
+@media (min-width: 769px) and (max-width: 920px) {
+	body.category article a>.entry-content {
+		padding-top: 56%;
+	}
+
+	body.category article>.entry-header {
+		max-width: calc(70% - 10% + .25%);
+	}
+}
+
+@media (max-width: 768px) and (min-width: 533px) {
+	body.category article a>.entry-content {
+		padding-top: 50%;
+	}
+}
+
+@media (max-width: 532px) and (min-width: 417px) {
+	body.category article a>.entry-content {
+		padding-top: 65%;
+	}
+}
+
+@media (max-width: 416px) {
+	body.category article a>.entry-content {
+		padding-top: 90%;
+	}
+}
+
+@media (max-width: 768px) {
+	body.category article>.entry-header {
+		max-width: calc(91%);
+	}
+}
+
+
+/* FIN CATEGORY */

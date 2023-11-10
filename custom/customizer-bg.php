@@ -18,3 +18,24 @@ function bg_customize_register( $wp_customize ) {
     )));
 }
 add_action('customize_register', 'bg_customize_register');
+
+
+/** SELECT BG IMAGE **/
+function mytheme_register_assets() {
+	if (get_theme_mod( 'customizer_setting_bg' )) {
+		wp_enqueue_style('bg-php', 'bg-css.php' );
+		$imgurl = esc_url( get_theme_mod( 'customizer_setting_bg' ) );
+		$custom_bg = "
+            body {
+                background-image: linear-gradient(295deg,rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8) 50%),url($imgurl) !important;
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-color: white;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+		";
+		wp_add_inline_style( 'bg-php', $custom_bg );
+	}
+ }
+ add_action('wp_enqueue_scripts', 'mytheme_register_assets');
