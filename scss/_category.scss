@@ -139,14 +139,20 @@ article .entry-header {
 }
 
 
-body.single article.hentry .entry-content,
-body.single article.hentry .entry-header,
-body.page article.hentry .entry-content,
-body.page article.hentry .entry-header {
-	margin: 20px;
-	width: calc(100% - 40px);
+body {
+    .single,
+    .page {
+        article {
+            &.hentry {
+                .entry-header,
+                .entry-content {
+                    margin: 20px 0;
+                    // width: calc(100% - 40px);
+                }
+            }
+        }
+    } 
 }
-
 
 @media (min-width: 1201px) {
 	body.category article a>.entry-content {
