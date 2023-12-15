@@ -405,6 +405,13 @@ body .page article.hentry .entry-content {
   content: "";
 }
 
+.telegram::before {
+  font-family: "dashicons";
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  content: "";
+}
+
 .youtube::before {
   font-family: "Font Awesome 5 Brands";
   content: "";
@@ -853,7 +860,7 @@ footer a:hover {
 footer .icons a {
   float: left;
   text-decoration: none !important;
-  width: calc(25% - 30px);
+  width: calc(20% - 30px);
   text-align: center;
   font-size: 2em;
   margin: 15px;

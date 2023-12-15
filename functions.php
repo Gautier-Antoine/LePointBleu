@@ -28,7 +28,11 @@ function custom_remove_footer_credit () {
     remove_action( 'storefront_footer', 'storefront_credit', 20 );
     add_action( 'storefront_footer', 'custom_storefront_credit', 20 );
 }
-
+/**
+ * Footer details
+ *
+ * @return void
+ */
 function custom_storefront_credit() {
 	?>
 	<div class="icons">
@@ -36,13 +40,14 @@ function custom_storefront_credit() {
 		<a href="tel:+33-9-72-42-15-66" target="_blank" class="phone" title="Appelez-nous !"></a>
 		<a href="https://goo.gl/maps/1pUMbgfskstKAnZC6" target="_blank" class="map" title="Notre adresse"></a>
 		<a
-			href="https://www.facebook.com/pg/LePointBleuAssociation/"
-			target="_blank"
-			class="facebook"
-			title="Notre page Facebook"
+		href="https://www.facebook.com/pg/LePointBleuAssociation/"
+		target="_blank"
+		class="facebook"
+		title="Notre page Facebook"
 		></a>
+		<a href="https://t.me/lepointbleu" target="_blank" class="telegram" title="Groupe Telegram"></a>
 	</div>
-  	<a href="https://www.lepointbleu.net/mentions-legales/">Mentions Légales</a>
+  	<a href="https://www.lepointbleu.net/mentions-legales/" style="display: inline-block">Mentions Légales</a>
 	<div class="copyright">
 		&copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?> / designed by <a href="https://www.gautierantoine.com" alt="gautierantoine.com" target="_blank">gautierantoine.com</a>
 	</div><!-- .site-info -->
